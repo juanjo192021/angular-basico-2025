@@ -1,0 +1,18 @@
+<h1>Dragon Ball</h1>
+<hr />
+
+<section class="row">
+  <div class="col-12 col-sm-6">
+    <dragonball-character-add (newCharacter)="addCharacter($event)" />
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <!-- EL [characters] es una propiedad de entrada -->
+    <!-- El characters() es un signal que contiene un array de personajes -->
+    <!-- El characters() emite la lista de personajes y se la envia al [characters] quien es el componente padre -->
+    <dragonball-character-list
+      listName = "Listado de personajes"
+      [characters]="characters()"
+    />
+  </div>
+</section>
